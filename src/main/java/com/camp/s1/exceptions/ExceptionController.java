@@ -19,12 +19,12 @@ public class ExceptionController {
 		return mv;
 	}
 	
-	@ExceptionHandler(Exception.class)
-	public ModelAndView Error500Exception() {
-		ModelAndView mv = new ModelAndView();
-		mv.addObject("message", "잘못된 접근입니다.");
-		mv.setViewName("common/exception");
-		return mv;
-	}
+//	@ExceptionHandler(Exception.class)
+//	public ModelAndView Error500Exception() {
+//		ModelAndView mv = new ModelAndView();
+//		mv.addObject("message", "잘못된 접근입니다.");
+//		mv.setViewName("common/exception");
+//		return mv;
+//	}
 	
 }
