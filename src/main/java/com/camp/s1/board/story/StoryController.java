@@ -157,7 +157,7 @@ public class StoryController {
 	@GetMapping("storyfeed")
 	public ModelAndView getStoryFileList(Pager pager) throws Exception {
 		ModelAndView mv = new ModelAndView();
-		pager.setPerPage(6L);
+		pager.setPerPage(3L);
 		List<BbsDTO> ar = storyService.getBoardList(pager);
 		mv.addObject("list", ar);
 		mv.setViewName("common/storyfeed");

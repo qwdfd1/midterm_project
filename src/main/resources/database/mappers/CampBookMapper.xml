@@ -134,7 +134,7 @@
 	
 	<!-- getMyBookList - 멤버의 예약서를 조회 -->
 	<select id="getMyBookList" parameterType="CampBookDTO" resultType="CampBookDTO">
-		SELECT * FROM CAMPBOOK WHERE ID=#{id}
+		SELECT * FROM CAMPBOOK WHERE ID=#{id} ORDER BY NUM DESC
 	</select>
 	
 	
