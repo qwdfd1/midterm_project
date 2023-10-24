@@ -19,8 +19,10 @@ public class ReportService {
 	
 	public int setReportAdd(ReportDTO reportDTO) throws Exception {
 		
+		// 중복신고 방지 (result가 2면 중복신고)
 		int result = 0;
 		
+		// 게시글 신고시
 		if(reportDTO.getCommentNum() == null) {
 			List<ReportDTO> ar = reportDAO.getReporterList(reportDTO);
 			for (ReportDTO reportDTO2 : ar) {
@@ -32,6 +34,8 @@ public class ReportService {
 			}
 			return reportDAO.setReportAdd(reportDTO);
 		} 
+		
+		// 댓글 신고시
 		else {
 			List<ReportDTO> ar = reportDAO.getReporterList(reportDTO);
 			for (ReportDTO reportDTO2 : ar) {
